@@ -17,17 +17,22 @@ body {
   font-family: 'Inter', sans-serif;
 }
 .container {
+  max-width: 120rem;
+  margin: 0 auto;
+  height: 100vh;
 }
 .header__title {
-  font-size: 2.4rem;
+  font-size: 3.4rem;
   line-height: 1.4;
+  
 }
 header {
   margin-block: 3.8rem 2.2rem;
   padding: 1.9rem 3.8rem 3.5rem 3.8rem;
+  text-align: center;
 }
 .header__secondary {
-  display: inline-block;
+  display: block;
   font-weight: 300;
   color: #a0a0a4;
 }
@@ -35,7 +40,7 @@ header {
   font-weight: bold;
   color: #777783;
   margin-bottom: 1rem;
-  display: inline-block;
+  display: block;
 }
 .cards {
   display: flex;
@@ -53,12 +58,61 @@ header {
   flex-direction: column;
   gap: 3.4rem;
   padding: 3.4rem;
-  padding-bottom:4.7rem ;
+  padding-bottom: 4.7rem;
   box-shadow: 0 0 12px 10px rgba(76, 78, 97, 0.1);
+  border-radius: 4px;
+}
+#card__supervisor {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+#card__builder {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+#card__karma {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+#card__calculator {
+  border-top: 4px solid hsl(212, 86%, 64%);
 }
 .card__img {
   align-self: flex-end;
 }
 .card__paragraph {
   color: #b6b7b9;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 374px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 720px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .container {
+    padding-block: 9.1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 
+  }
+  #card__supervisor{
+   grid-area: 1/1 1/2;
+  }
+  #card__karma{
+    grid-area: 2/2;
+  }
+  #card__builder{
+    grid-area: 1/2;
+  }
+  #card__calculator{
+    grid-area: 1/3;
+  }
+
 }
