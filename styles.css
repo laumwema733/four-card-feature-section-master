@@ -1,26 +1,67 @@
 /* General css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-body{
- font-family: "Inter", sans-serif;;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --header-color: hsl(212, 6%, 44%);
+  --primary-color: hsl(234, 12%, 34%);
+}
+/* Header */
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+header {
+  padding-block: 3.8rem;
+}
+.header__content {
+  max-width: 50rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.header__title {
+  font-size: 3.4rem;
+}
+.header__secondary {
+  display: block;
+  font-weight: 400;
+  color: var(--header-color);
+}
+.header__primary {
+  display: block;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+.header__paragraph {
+  margin-bottom: 5.7rem;
+  color: var(--header-color);
+}
 /* cards */
 .cards {
-  max-width: 90%;
+  max-width: 80%;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   margin: 0 auto;
   gap: 1.6rem;
 }
 .card {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  padding: 32px;
+  padding: 3.2rem;
   display: flex;
   flex-direction: column;
+  gap: 3.2rem;
 }
 
 .card__supervisor {
@@ -56,21 +97,38 @@ body{
   align-self: flex-end;
 }
 .card__paragraph {
-  /* color: #b6b7b9; */
+  color: #b6b7b9;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.card__title {
+  font-size: 2.4rem;
+  margin-bottom: 0.7rem;
+  color: var(--header-color);
 }
 
-/* @media (max-width: 600px) {
+footer {
+  margin-top: 4rem;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
   .card {
-    width: 374px;
-    margin: 0 auto;
+    grid-column: span 1 / span 1;
+    grid-row: span 1 / span 1;
+  }
+  .header__paragraph {
+    margin-bottom: 2rem;
+  }
+
+  .header__content{
+    padding: 3.8rem;
+    line-height: 1.2;
+    padding-bottom: 0;
+  }
+  .header__title{
+    font-size: 2.6rem;
   }
 }
-@media (min-width: 720px) {
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .container {
-    padding-block: 9.1rem;
-  }
-} */
