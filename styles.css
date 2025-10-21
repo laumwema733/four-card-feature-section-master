@@ -7,13 +7,13 @@
 body {
   font-family: 'Inter', sans-serif;
   font-size: 1.6rem;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 html {
   font-size: 62.5%;
 }
 :root {
-  --header-color: hsl(212, 6%, 44%);
+  --header-color: #b6b7b9;
   --primary-color: hsl(234, 12%, 34%);
 }
 /* Header */
@@ -28,6 +28,7 @@ header {
   max-width: 50rem;
   text-align: center;
   margin: 0 auto;
+  
 }
 .header__title {
   font-size: 3.4rem;
@@ -40,7 +41,8 @@ header {
 .header__primary {
   display: block;
   color: var(--primary-color);
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
+  
 }
 .header__paragraph {
   margin-bottom: 5.7rem;
@@ -104,11 +106,11 @@ header {
 .card__title {
   font-size: 2.4rem;
   margin-bottom: 0.7rem;
-  color: var(--header-color);
+  color: var(--primary-color);
 }
 
 footer {
-  margin-top: 4rem;
+  margin-block: 4rem;
 }
 
 @media (max-width: 600px) {
@@ -123,12 +125,16 @@ footer {
     margin-bottom: 2rem;
   }
 
-  .header__content{
+  .header__content {
     padding: 3.8rem;
     line-height: 1.2;
     padding-bottom: 0;
   }
-  .header__title{
+  .header__title {
     font-size: 2.6rem;
+  }
+  .card__title {
+    font-size: 2rem;
+    color: var(--primary-color);
   }
 }
