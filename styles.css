@@ -1,87 +1,65 @@
+/* General css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* global css */
-:root {
-  --header-color: #787883;
+body{
+ font-family: "Inter", sans-serif;;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-}
-body {
-  font-size: 1.6rem;
-  font-family: 'Inter', sans-serif;
-}
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-  height: 100vh;
-}
-.header__title {
-  font-size: 3.4rem;
-  line-height: 1.4;
-  
-}
-header {
-  margin-block: 3.8rem 2.2rem;
-  padding: 1.9rem 3.8rem 3.5rem 3.8rem;
-  text-align: center;
-}
-.header__secondary {
-  display: block;
-  font-weight: 300;
-  color: #a0a0a4;
-}
-.header__main {
-  font-weight: bold;
-  color: #777783;
-  margin-bottom: 1rem;
-  display: block;
-}
+
+
+/* cards */
 .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
-  padding: 3rem;
-}
-.card__title {
-  font-size: 2rem;
-  color: var(--header-color);
-  margin-bottom: 1.2rem;
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  margin: 0 auto;
+  gap: 1.6rem;
 }
 .card {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 3.4rem;
-  padding: 3.4rem;
-  padding-bottom: 4.7rem;
-  box-shadow: 0 0 12px 10px rgba(76, 78, 97, 0.1);
-  border-radius: 4px;
 }
-#card__supervisor {
+
+.card__supervisor {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+  grid-row-start: 2;
   border-top: 4px solid hsl(180, 62%, 55%);
 }
-#card__builder {
+.card__builder {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+  grid-column-start: 4;
   border-top: 4px solid hsl(0, 78%, 62%);
 }
-#card__karma {
+.card__karma {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+  grid-row-start: 3;
+  grid-column-start: 4;
   border-top: 4px solid hsl(34, 97%, 64%);
 }
-#card__calculator {
+.card__calculator {
+  grid-column: span 3 / span 3;
+  grid-row: span 2 / span 2;
+  grid-row-start: 2;
   border-top: 4px solid hsl(212, 86%, 64%);
 }
+.card__icon {
+  align-self: flex-end;
+}
+
 .card__img {
   align-self: flex-end;
 }
 .card__paragraph {
-  color: #b6b7b9;
+  /* color: #b6b7b9; */
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .card {
     width: 374px;
     margin: 0 auto;
@@ -95,24 +73,4 @@ header {
   .container {
     padding-block: 9.1rem;
   }
-}
-
-@media (min-width: 800px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 
-  }
-  #card__supervisor{
-   grid-area: 1/1 1/2;
-  }
-  #card__karma{
-    grid-area: 2/2;
-  }
-  #card__builder{
-    grid-area: 1/2;
-  }
-  #card__calculator{
-    grid-area: 1/3;
-  }
-
-}
+} */
