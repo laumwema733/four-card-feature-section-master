@@ -16,11 +16,9 @@ html {
   --header-color: #b6b7b9;
   --primary-color: hsl(234, 12%, 34%);
 }
-/* Header */
-/* .container {
-  max-width: 1200px;
-  margin: 0 auto;
-} */
+.container{
+  margin-top: 3.2rem;
+}
 header {
   padding-block: 3.8rem;
 }
